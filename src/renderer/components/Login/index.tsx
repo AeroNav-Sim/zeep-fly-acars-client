@@ -6,6 +6,7 @@ import {
   Box,
   Image,
   Flex,
+  Text,
 } from "@mantine/core";
 import backgroundImage from "../../../assets/images/cockpit.webp";
 import logo from "../../../assets/logo/logo-full.png";
@@ -14,7 +15,7 @@ const Login = () => {
   return (
     <BackgroundImage src={backgroundImage} h="100vh" w="100vw">
       <Container h="100vh" w="100vw" bg="rgba(0, 0, 0, 0.7)">
-        <Flex justify="center" direction="column" align="center" h="100vh">
+        <Flex justify="center" direction="column" align="center" h="92%">
           <Image src={logo} alt="Logo" w={200} mb={40} />
           <Box maw={300} mx="auto">
             <Input
@@ -38,6 +39,22 @@ const Login = () => {
             </Flex>
           </Box>
         </Flex>
+        <Box>
+          <Flex
+            justify="center"
+            align="center"
+            direction="column"
+            flex={1}
+            gap={5}
+          >
+            <Text size="xs" c="white">
+              Powered by AeroNav Sim
+            </Text>
+            <Text size="xs" c="white">
+              Versão 1.0.0
+            </Text>
+          </Flex>
+        </Box>
       </Container>
     </BackgroundImage>
   );
