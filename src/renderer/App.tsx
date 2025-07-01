@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { createTheme, MantineProvider, Input } from "@mantine/core";
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Flights from "./components/Flights";
 import FlightDetail from "./components/FlightDetail";
@@ -9,7 +9,6 @@ import Settings from "./components/Settings";
 import Login from "./components/Login";
 import "@mantine/core/styles.css";
 
-// Layout component that includes navigation
 const RootLayout = () => {
   return (
     <div className="app">
@@ -21,7 +20,6 @@ const RootLayout = () => {
   );
 };
 
-// Create router configuration
 const router = createBrowserRouter([
   {
     path: "/",
