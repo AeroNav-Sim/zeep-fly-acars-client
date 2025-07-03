@@ -2,11 +2,11 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { createTheme, MantineProvider, Input } from "@mantine/core";
 // import Navigation from "./components/Navigation";
-import Home from "./components/Home";
-import Flights from "./components/Flights";
-import FlightDetail from "./components/FlightDetail";
-import Settings from "./components/Settings";
-import Login from "./components/Login";
+import Home from "./pages/Home";
+import Flights from "./pages/Flights";
+import FlightDetail from "./pages/FlightDetail";
+import Settings from "./pages/Settings";
+import Login from "./pages/Login";
 import "@mantine/core/styles.css";
 
 const RootLayout = () => {
@@ -50,6 +50,8 @@ const router = createBrowserRouter([
 ]);
 
 const theme = createTheme({
+  black: "#f1f1f1",
+  white: "#1a1a1a",
   fontFamily: "Inter, sans-serif",
   primaryColor: "blue",
   primaryShade: 6,

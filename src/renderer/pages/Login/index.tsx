@@ -10,8 +10,15 @@ import {
 } from "@mantine/core";
 import backgroundImage from "../../../assets/images/cockpit.webp";
 import logo from "../../../assets/logo/logo-full.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/home");
+  };
+
   return (
     <BackgroundImage src={backgroundImage} h="100vh" w="100vw">
       <Container h="100vh" w="100vw" bg="rgba(0, 0, 0, 0.7)">
@@ -33,7 +40,12 @@ const Login = () => {
               type="password"
             />
             <Flex justify="flex-end" mt={10}>
-              <Button size="md" radius="md" variant="light">
+              <Button
+                size="md"
+                radius="md"
+                variant="light"
+                onClick={handleLogin}
+              >
                 Conectar
               </Button>
             </Flex>
